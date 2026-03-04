@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --lead: #212121;
+    --gold-finger: #F2BD12;
+    --eye-ball: #FFFDF7;
+    --hint-yellow: #FCF1CC;
+    --pure-white: #FFF;
+}
+
+
+body {
+    background: var(--eye-ball);
+}
+
+
+
+/* BASIC STYLING */
+
+a {
+    font-size: 1.1rem;
+    text-decoration: none
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+
+    /* yeha ham flex-wrap kerna wala hai jisse ham jab size ko small kerange tab vo automatically size ke eshab se wrap hoti jayegi okey IT IS VERY IMPORTANT TO UNDERSTAND OKEY */
+    flex-wrap: wrap;
+
+}
+
+li {
+    list-style: none;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.wrapper {
+    max-width: 1400px;
+    /* background-color: gold; */
+    margin: auto;
+    /* this is important okey to make navbar center okey  */
+    padding-inline: 1.5rem;
+    /* isse kya hoga ki jo logo and and sign in end corners pe chipak reha tha vo solve ho jayega  */
+}
+
+.cart-icon {
+    color: var(--lead);
+    font-size: 1.3rem;
+    position: relative;
+
+}
+
+.cart-icon .cart-value {
+    position: absolute;
+    font-size: .85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    /* search it on google  */
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    text-align: center;
+    line-height: 20px;
+    /*ye leta ham jitna width hota hai and isse ham leta hai because of ki vo jo 0 hai isme vo centre pe aa jaye okey  */
+    /* ISS 0 KI CORRECT POSITION LENA KE LIYA HAME YE KERNA PADEGA OKEY  */
+    top: 50%;
+    right: -10px;
+    /* above two are very important okey  */
+
+
+}
+
+
+img {
+    /* my mistake is ki mena yeha .img likh diya tha my mistake */
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+    /* this is very important okey to esa check kerna ke liye visit timestamp  52min okey vesa ye unwanted space ko hata raha hai  */
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+
+.mt-half{
+    margin-top: .5rem;
+}
+
+
+.mt-one-half{
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+/* HEADER STYLING */
+
+
+.navbar {
+    min-height: 14vh;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-finger);
+}
+
+.btn {
+    display: inline-block;
+    /* sir ne bola ki ye anchor tag me hai islye ye dislpay use ker lo and i dont know the reason why it is used okey   */
+    padding: .9rem;
+    background: var(--gold-finger);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: var(--pure-white);
+    box-shadow: rgba(0, 0, 0, 0.051) 0 2px 1px;
+    /* x-0 y-2px  spread and blur -1px*/
+    transition: .3s ease-in-out;
+
+
+
+}
+
+.btn:hover {
+    background: var(--lead);
+}
+
+.desktop-action .hamburger {
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+.mobile-menu {
+    display: none;
+    /* because ham isse large screen per nai dikhan chata to kaha dikhana hai vo ham media quary se set ker denga okey  */
+
+}
+
+
+
+/* SECTION STYLING  */
+
+
+.hero-section {
+    /* background:rgb(255, 217, 0); */
+    min-height: calc(100vh - 14vh);
+    /* THIS IS VERY IMPORTANT STEP KI HAMA HER DEVICE KE HISHAB SE HEIGHT LE REHA HAI OKEY */
+    /* LIKHANA KA TARIKA ESA HI HONA CHAIYE OKEY calc(100vh - 14vh) MY MISTAKE IS KI MENA U LIKHA THA KI calc(100vh-14vh) */
+
+
+}
+
+.content,
+.image-container,
+.service-card {
+    flex: 1;
+    /* flex 1 is very important okey see what happen if we remove flex:1 ; okey */
+    flex-basis: 300px;
+    /* THIS IS VERY VERY MUCH IMPORTANT FOR RESPONSIVE WEBSITE BECAUSE JO HAM NE UPPER FLEX ME FLRX-WRAP KIYA VO ACCHA SE KAAM NAI KERAGA AGER HAM YEHA YE FLEX BASIS NAI LAGAYENGA OKEY     |||  TIMESTAMP 59 MIN */
+}
+
+h1 {
+    font-size: 5.6vw;
+    /* this is important okey */
+    color: var(--lead);
+}
+
+h1 span {
+    /* means h1 me hamne jo span banaya hai  */
+    color: var(--gold-finger);
+}
+
+p {
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 2rem;
+    /* block kerna se left me jo unwanted space aa rahi thi vo hat gai okey try it by analysing both the cases okey  */
+}
+
+
+
+
+.social-icons {
+    background: var(--hint-yellow);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    /* display: flex; 
+    justify-content: center;
+    align-items: center; */
+
+    /* icon ko centre kerna ke liya upper ke 3 line na kerke bas itna ker saktha hai ham ki line height : width ke jitni okey */
+    line-height: 3rem;
+
+    box-shadow: rgba(0, 0, 0, 0.051) 0 2px 1px;
+
+    /* to make smooth we add transition */
+    transition: .3s ease-in-out;
+}
+
+.social-icons:hover {
+    background: var(--lead);
+    color: var(--pure-white);
+}
+
+
+.p-top {
+    padding-top: 10rem;
+}
+
+
+
+/* section1  */
+h5 {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: var(--gold-finger);
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead);
+}
+
+
+h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--lead);
+
+}
+
+
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--lead);
+
+}
+
+.order-card .price {
+    font-size: 1.7rem;
+    color: var(--gold-finger);
+    padding: 1.3rem 0 2rem 0;
+}
+
+
+
+.m-auto{
+    margin: auto;
+}
+
+
+
+
+/* Section our menu  */
+
+.order-card {
+
+    /* important okey */
+    flex: 1;
+    flex-basis: 300px;
+
+    padding: 0 1rem 2rem 1rem;
+
+    background: var(--pure-white);
+    border: .1rem solid var(--gold-finger);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.526) 8px 8px 8px,
+        /* shadow: x-axis y-axis  spread and blur -8px */
+        rgba(0, 0, 0, 0.355) 8px 8px 8px inset;
+    /*  *ye hai inner shadow okey /  /* best result ke liya dono ko ek sath lagao okey */
+
+    /* smooth banane ke liya transation lagay hai okey  */
+    transition: all .5s ease-in-out;
+
+}
+
+.order-card img {
+    width: 15rem;
+    filter: drop-shadow(black 0 10px 10px);
+    /* iise cards ki images hai uspe shadow aa jayegi okey  */
+}
+
+
+
+
+
+
+/* Review Section styling */
+
+/* slider styling  */
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.review-container{
+   width: 650px;
+   max-width: 100%;
+}
+
+.profile {
+    width: 4rem;
+
+    aspect-ratio: 1; /* ye kaam aata hai circle create kerna ke liya eska alawa tum height:4rem ; deta to bhi sahi tha okey */
+   
+    overflow: hidden;/* it is important */
+    
+
+
+}
+
+.profile img {
+    border-radius: 100vw;
+    width: 100%; /*  matlab image ka jo parent hai uski puri width le lo yeha img ka parent hai profile and profile ki jo width hai vo hai 4rem to img 100% MEANS puri width lele gi okey */
+    height: 100%;
+    object-fit: cover;  /* it is important  */
+   
+
+}
+
+.fa-star{
+    color: var(--gold-finger);
+}
+
+
+
+
+
+
+/* our apllication  section */
+
+
+.app-container{
+   padding-top: 5rem;
+   margin-bottom: 1rem;
+    background: var(--hint-yellow);
+    border-radius: 5vw;
+
+}
+
+
+.app-container img{
+    width: 30vw;
+} 
+
+
+.app-container .content .para{
+    font-size: 2rem;
+   
+    margin-top: -3px;
+}
+
+.app-container .content h2{
+    max-width:650px;
+    font-size: 7rem;
+}
+
+
+/* Input Container styling okey */
+
+
+.input-container{
+
+    width: 43rem;
+    max-width: 100%;
+    background: var(--pure-white);
+ padding: .8rem;
+ box-shadow: 
+  rgba(0, 0, 0, 0.232) 0 5px 8px ;
+  border-radius: 1rem;
+
+}
+
+input[type="email"]{
+    flex: 1;
+    height: 7vh;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    
+}
+
+input[type="email"]:focus{
+    outline: none;
+}
+
+
+
+
+/* CART TAB STYLING */
+
+.cart-tab{
+background: var(--hint-yellow);
+
+/* cart tab ko right me lane ke liye hame ye kerna hoga thik hai  */
+position: fixed;
+inset: 0 -500px 0 auto;  /* this is very much important to bring cart on  right okey keep this thing in your mind okey  */
+/* upper -500px usse hide kern ke liye lagaya hai jisse use show kerwa sakke bad me  */
+width: 25rem;
+padding-block:2rem ; /* taki upper niche se content touch na ho scrren ke sath  */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+z-index: 99;  /* this is important because ab koi bhi iise upper nai aayega okey  */
+box-shadow: 
+rgba(0, 0, 0, 0.493) -10px -10px 20px ;
+
+/* Transition ko smooth bana ke liye okey  */
+transition: .3sec ease-in-out;
+}
+
+/* This is very important okey  */
+.cart-tab-active{
+
+    inset: 0 0 0 auto; 
+
+
+}
+
+.cart-list{   
+    flex: 1;   /* iise ky hoga ki cart list sabse jyada space le le ga okey  */
+    width: 100%;
+    margin-top: 1.5rem;
+    overflow: auto;  /* YEKERNA SE HAME CART LIST ME SCROLL BAR MIL GAYA  */
+
+}
+
+.cart-list::-webkit-scrollbar{   /* ye kerna se jo scrolbar aa raha tha vo hat jayega but scrol abhi bhi hoga okey  */
+    width: 0;
+}
+
+
+
+
+
+.total-container{
+    width: 100%;
+    background: var(--gold-finger);
+    text-align: center;
+    margin-block: 1rem;
+    padding-block: 1rem;
+
+}
+
+.total-container h4{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+
+.btn-container .btn{
+background-color: var(--lead);
+transition: 0.3s ease-in-out;
+
+}
+
+
+.btn-container .btn:hover{
+    background-color: var(--gold-finger);
+    color: var(--lead);
+}
+
+
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+padding: .7rem 1rem;
+transition: all .5s ease-in-out;
+
+
+}
+
+
+/* Slide Animation   */
+
+.item.slide-out{
+transform: translateX(50%);
+}
+
+
+/* This is very important okey  to show alternate color okey  */
+
+.cart-list .item:nth-child(even){
+background: var(--eye-ball);
+}
+
+.item .item-image img{
+width:5rem;
+}
+
+.item h4{
+    font-size: 1.3rem;
+    color: var(--lead);
+}
+
+.item .item-total{
+    font-weight: 400;
+    margin-top: 0.3rem;
+
+}
+
+.quantity-btn{
+    background: var(--lead);
+    color: var(--pure-white);
+    width: 1.7rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+    line-height: 1.7rem;  /* centre me lene ke liye  */
+
+}
+
+.quanity-value{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-inline:0.6rem;
+
+}
+
+
+
+
+
+
+
+
+/* FOOTER STYLING */
+
+
+
+
+
+.footer-container{
+    margin-top: 10rem;
+    padding-block:4rem;
+    background: var(--hint-yellow);
+}
+
+
+.footer-wrapper:nth-child(1){
+    flex: 2;
+    flex-basis: 300px;
+}
+
+.footer-wrapper{
+    flex: 1;
+    /* to make it responsive okey */
+    flex-basis: 150px;
+}
+
+.footer-wrapper .social-icons{
+    background: var(--pure-white);
+}
+
+.footer-wrapper .social-icons:hover{
+    background: var(--lead) ;
+    color: var(--pure-white);
+}
+
+
+.footer-link {
+    color: gray;
+    font-size: 1.1rem
+}
+
+.footer-link:hover{
+    color: var(--lead);
+}
+
+
+.footer-container .flex{
+    align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Quaries  */
+
+
+
+@media screen and (max-width: 780px) {
+
+    /* 780px or isse kam tak ye chakega nai to nai chelage okey   */
+    .navlist,
+    .desktop-action .btn {
+        display: none;
+    }
+
+    .desktop-action .hamburger {
+        /* my mistke is ke mena yeha ye use nai kiya tha   .desktop-action    */
+        display: block;
+        /* display block se jo apne ne display : none  kerke hide kiya tha vo vapise se show hone legaga if we do display:block */
+
+    }
+
+    .mobile-menu {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        /* IS MOBILE-MENU KI CORRECT POSTION KE LIYA HAME YE SAB KERNA PADEGA OKEY */
+        position: absolute;
+        top: 20%;
+        /* left: 50%; */
+        left: -100%;
+        /* ye kerna se ye left me hide ho jayega okey  */
+
+
+        transform: translateX(-50%);
+        /* ISSE X AXIS ME PERFECT CENTRE HO JAYEGA  */
+
+        /* ALL ABOVE ARE IMPORTANT OKEY  */
+
+        width: 20rem;
+        padding: 2rem;
+        background: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.526) 8px 8px 8px,
+            /* shadow: x-axis y-axis  spread and blur -8px */
+            rgba(0, 0, 0, 0.355) 8px 8px 8px inset;
+        /*  *ye hai inner shadow okey /  /* best result ke liya dono ko ek sath lagao okey */
+
+        /* smooth banane ke liya transation lagay hai okey  */
+        transition: all .5s ease-in-out;
+
+
+
+
+
+    }
+
+    .mobile-menu-active{
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+
+    /* SECTION STYLING */
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    .content {
+        padding-top: 3rem;
+    }
+
+    .gap-2 {
+        gap: 1.4rem;
+    }
+
+    .gap-4 {
+        gap: 4rem;
+    }
+
+
+
+
+
+    .app-container{
+   padding-top: 1rem;
+   margin-bottom: 3rem;
+    background: var(--hint-yellow);
+    border-radius: 5vw;
+
+}
+
+
+
+    .app-container img{
+    width: 150px;
+    margin-left: 130px;
+}
+
+.app-container .content{
+    text-align: center;
+    margin-top: -80px;
+}
+.app-container .content h2{
+    max-width:650px;
+    font-size: 2rem;
+}
+
+.app-container .content .para{
+    max-width:650px;
+    font-size: 1rem;
+}
+
+.ourapll{
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+
+
+/* FOOTER STYLING */
+
+
+
+
+
+
+
+
+
+
+}
